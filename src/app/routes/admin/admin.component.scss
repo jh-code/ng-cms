@@ -1,0 +1,20 @@
+.mat-sidenav-container {
+  .mat-sidenav {
+    width: 200px;
+    transition: width .1s linear;
+
+    a.active {
+      background-color: rgba(0, 0, 0, 0.1);
+    }
+  }  
+
+  &.closed {
+    .mat-sidenav {
+      width: 4.5em;
+    }
+
+    .mat-sidenav-content {
+      margin-left: 4.5em !important;
+    }
+  }
+}

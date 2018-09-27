@@ -1,0 +1,21 @@
+@import 'variables';
+@import '~bootstrap/scss/bootstrap';
+
+@include mat-core($custom-typography);
+@include angular-material-theme($dark-theme);
+
+.light-theme {
+  @include angular-material-theme($light-theme);
+}
+
+.mat-toolbar-sm.mat-toolbar {
+  height: $sm-toolbar-height;
+}
+
+.mat-toolbar-xs.mat-toolbar {
+  height: $xs-toolbar-height;
+}
+
+.mat-drawer-container {
+  min-height: calc(100vh - #{$sm-toolbar-height} - #{$xs-toolbar-height} - 1px);
+}

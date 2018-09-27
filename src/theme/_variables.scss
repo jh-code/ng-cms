@@ -1,0 +1,97 @@
+@import '~@angular/material/theming';
+@import 'palettes';
+
+$custom-typography: mat-typography-config(
+    $font-family: '"Ubuntu Mono", monospace'
+);
+
+/* light theme */
+$mat-light-theme-foreground: (
+  base: black,
+  divider: $light-dividers,
+  dividers: $light-dividers,
+  disabled: $light-disabled-text,
+  disabled-button: rgba(black, 0.26),
+  disabled-text: $light-disabled-text,
+  hint-text: $light-disabled-text,
+  secondary-text: $light-secondary-text,
+  icon: rgba(black, 0.54),
+  icons: rgba(black, 0.54),
+  text: rgba(black, 0.87),
+  slider-min: rgba(black, 0.87),
+  slider-off: rgba(black, 0.26),
+  slider-off-active: rgba(black, 0.38)
+);
+
+$mat-light-theme-background: (
+  status-bar: map_get($mat-grey, 300),
+  app-bar: map_get($mat-grey, 100),
+  background: map_get($mat-grey, 50),
+  hover: rgba(black, 0.04),
+  card: white,
+  dialog: white,
+  disabled-button: rgba(black, 0.12),
+  raised-button: white,
+  focused-button: $dark-focused,
+  selected-button: map_get($mat-grey, 300),
+  selected-disabled-button: map_get($mat-grey, 400),
+  disabled-button-toggle: map_get($mat-grey, 200),
+  unselected-chip: map_get($mat-grey, 300),
+  disabled-list-option: map_get($mat-grey, 200)
+);
+
+/* dark theme */
+$mat-dark-theme-foreground: (
+  base: white,
+  divider: darken(#3c464f, 5%),
+  dividers: $light-dividers,
+  disabled: $light-disabled-text,
+  disabled-button: rgba(white, 0.26),
+  disabled-text: $light-disabled-text,
+  hint-text: $light-disabled-text,
+  secondary-text: $light-secondary-text,
+  icon: rgba(white, 0.54),
+  icons: rgba(white, 0.54),
+  text: rgba(white, 0.87),
+  slider-min: rgba(white, 0.87),
+  slider-off: rgba(white, 0.26),
+  slider-off-active: rgba(white, 0.38)
+);
+
+$mat-dark-theme-background: (
+  status-bar: map_get($mat-grey, 300),
+  app-bar: #3c464f,
+  background: #3c464f,
+  hover: rgba(white, 0.04),
+  card: #3c464f,
+  dialog: #3c464f,
+  disabled-button: rgba(white, 0.12),
+  raised-button: #3c464f,
+  focused-button: $light-focused,
+  selected-button: map_get($mat-grey, 300),
+  selected-disabled-button: map_get($mat-grey, 400),
+  disabled-button-toggle: map_get($mat-grey, 200),
+  unselected-chip: map_get($mat-grey, 300),
+  disabled-list-option: map_get($mat-grey, 200)
+);
+
+$light-theme: (
+  primary: mat-palette($mat-primary),
+  accent: mat-palette($mat-accent),
+  warn: mat-palette($mat-red),
+  is-dark: false,
+  foreground: $mat-light-theme-foreground,
+  background: $mat-light-theme-background
+);
+
+$dark-theme: (
+  primary: mat-palette($mat-primary),
+  accent: mat-palette($mat-accent),
+  warn: mat-palette($mat-red),
+  is-dark: true,
+  foreground: $mat-dark-theme-foreground,
+  background: $mat-dark-theme-background
+);
+
+$sm-toolbar-height: 40px;
+$xs-toolbar-height: 32px;
