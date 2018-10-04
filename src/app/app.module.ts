@@ -5,6 +5,7 @@ import { NgModule } from '@angular/core';
 import { AppRoutingModule } from './app.routing';
 import { AppComponent } from './app.component';
 import { SettingsModule } from './services/settings/settings.module';
+import { ThemeModule } from './services/theme/theme.module';
 
 @NgModule({
   declarations: [
@@ -14,7 +15,8 @@ import { SettingsModule } from './services/settings/settings.module';
     BrowserModule,
     BrowserAnimationsModule,
     AppRoutingModule,
-    SettingsModule
+    SettingsModule,
+    ThemeModule
   ],
   providers: [],
   bootstrap: [AppComponent]
