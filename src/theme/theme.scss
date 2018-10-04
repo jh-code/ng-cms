@@ -8,6 +8,35 @@
   @include angular-material-theme($light-theme);
 }
 
+.bg-primary-accent {
+  background-image: linear-gradient(
+    to right,
+    mat-color(mat-palette($app-primary)),
+    mat-color(mat-palette($app-accent))
+  );
+}
+
+a {
+  color: mat-color(mat-palette($app-primary), A400);
+
+  &:hover {
+    color: mat-color(mat-palette($app-primary));
+    text-decoration: none;
+  }
+}
+
+.mat-nav-list .mat-list-item.active {
+  &:active, &:focus, &:hover {
+    @extend .bg-primary-accent;
+  }
+}
+
+.mat-raised-button {
+  &.mat-warn, &.mat-accent {
+    color: white;
+  }
+}
+
 .mat-toolbar-sm.mat-toolbar {
   height: $sm-toolbar-height;
 }
@@ -17,5 +46,5 @@
 }
 
 .mat-drawer-container {
-  min-height: calc(100vh - #{$sm-toolbar-height} - #{$xs-toolbar-height} - 1px);
+  min-height: calc(100vh - #{$sm-toolbar-height});
 }

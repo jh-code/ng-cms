@@ -1,46 +1,10 @@
-<app-header></app-header>
+<header class="mat-elevation-z5">
+  <app-header></app-header>
+</header>
 
 <mat-sidenav-container [class.closed]="!navOpen">
   <mat-sidenav mode="side" opened class="mat-elevation-z3">
-    <mat-nav-list class="d-flex flex-column justify-content-center pt-0">
-      <a mat-list-item matTooltipPosition="right" [matTooltip]="!navOpen ? 'Dashboard' : ''" routerLink="/admin"
-        routerLinkActive="active mat-elevation-z1" [routerLinkActiveOptions]="{ exact: true }">
-        <mat-icon mat-list-icon>dashboard</mat-icon>
-        <span mat-line *ngIf="navOpen">Dashboard</span>
-      </a>
-
-      <a mat-list-item matTooltipPosition="right" [matTooltip]="!navOpen ? 'Posts' : ''" routerLink="/admin/posts"
-        routerLinkActive="active mat-elevation-z1">
-        <mat-icon mat-list-icon>edit</mat-icon>
-        <span mat-line *ngIf="navOpen">Posts</span>
-      </a>
-
-      <a mat-list-item matTooltipPosition="right" [matTooltip]="!navOpen ? 'Users' : ''" routerLink="/admin/users"
-        routerLinkActive="active mat-elevation-z1">
-        <mat-icon mat-list-icon>person</mat-icon>
-        <span mat-line *ngIf="navOpen">Users</span>
-      </a>
-
-      <a mat-list-item matTooltipPosition="right" [matTooltip]="!navOpen ? 'Settings' : ''" routerLink="/admin/settings"
-        routerLinkActive="active mat-elevation-z1">
-        <mat-icon mat-list-icon>settings</mat-icon>
-        <span mat-line *ngIf="navOpen">Settings</span>
-      </a>
-    </mat-nav-list>
-
-    <mat-nav-list class="mt-4" dense>
-      <a mat-list-item matTooltipPosition="right" matTooltip="Expand Nav" (click)="navOpen = !navOpen" *ngIf="!navOpen">
-        <mat-icon mat-list-icon *ngIf="!navOpen">
-          <small>chevron_right</small>
-        </mat-icon>
-      </a>
-      <a mat-list-item (click)="navOpen = !navOpen" *ngIf="navOpen">
-        <mat-icon mat-list-icon *ngIf="navOpen">
-          <small>chevron_left</small>
-        </mat-icon>
-        <span mat-line *ngIf="navOpen">collapse nav</span>
-      </a>
-    </mat-nav-list>
+    <app-admin-nav-list [navOpen]="navOpen" (navToggle)="navOpen = !navOpen"></app-admin-nav-list>
   </mat-sidenav>
 
   <mat-sidenav-content>
@@ -49,7 +13,3 @@
     </div>
   </mat-sidenav-content>
 </mat-sidenav-container>
-
-<mat-divider color="primary"></mat-divider>
-
-<app-footer></app-footer>

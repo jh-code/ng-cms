@@ -1,8 +1,12 @@
-<h1>Settings</h1>
-<p class="lead">Don't forget to save your changes!</p>
+<div class="row d-flex align-items-center">
+  <div class="col-md-8 text-center text-md-left mb-2">
+    <h2>Settings</h2>
+    <p class="lead mb-0">Don't forget to save your changes!</p>
+  </div>
 
-<mat-divider></mat-divider>
+  <section id="site-settings" class="col-md-4 text-center text-md-right mb-2">
+    <button mat-raised-button class="bg-primary-accent" (click)="save()">Save Settings</button>
+  </section>
 
-<section id="site-settings" class="mt-4">
-  <button mat-raised-button color="accent" (click)="save()">Save Settings</button>
-</section>
+  <mat-divider class="col-12"></mat-divider>
+</div>
