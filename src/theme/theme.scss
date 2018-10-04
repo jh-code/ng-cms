@@ -13,7 +13,7 @@
     to right,
     mat-color(mat-palette($app-primary)),
     mat-color(mat-palette($app-accent))
-  );
+  ) !important;
   color: white !important;
 }
 

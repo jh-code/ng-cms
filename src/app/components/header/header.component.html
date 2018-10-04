@@ -19,7 +19,7 @@
         <mat-icon>exit_to_app</mat-icon> Logout
       </a>
       <span mat-menu-item (click)="$event.stopPropagation()" [disableRipple]="true">
-        <mat-slide-toggle color="accent">Dark Theme</mat-slide-toggle>
+        <mat-slide-toggle color="accent" (change)="setTheme($event)" [checked]="isDarkTheme">Dark Theme</mat-slide-toggle>
       </span>
     </ng-template>
   </mat-menu>
