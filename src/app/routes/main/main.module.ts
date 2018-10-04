@@ -1,20 +1,18 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { LoginComponent } from './login.component';
-import { LoginRoutingModule } from './login.routing';
+import { MainComponent } from './main.component';
+import { MainRoutingModule } from './main.routing';
 import { MatCardModule, MatInputModule, MatButtonModule, MatDividerModule } from '@angular/material';
-import { FormsModule } from '@angular/forms';
 
 @NgModule({
   imports: [
     CommonModule,
-    FormsModule,
-    LoginRoutingModule,
+    MainRoutingModule,
     MatCardModule,
     MatInputModule,
     MatButtonModule,
     MatDividerModule
   ],
-  declarations: [LoginComponent]
+  declarations: [MainComponent]
 })
-export class LoginModule { }
+export class MainModule { }

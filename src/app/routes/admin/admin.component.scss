@@ -1,11 +1,12 @@
+header {
+  position: relative;
+  z-index: 2;
+}
+
 .mat-sidenav-container {
   .mat-sidenav {
     width: 200px;
     transition: width .1s linear;
-
-    a.active {
-      background-color: rgba(0, 0, 0, 0.1);
-    }
   }  
 
   &.closed {

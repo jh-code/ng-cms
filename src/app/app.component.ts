@@ -1,6 +1,4 @@
 import { Component, ElementRef, OnInit, Renderer2 } from '@angular/core';
-import { SettingsService } from './services/settings/settings.service';
-import { Setting } from './models/setting.model';
 
 @Component({
   selector: 'app-root',
@@ -12,18 +10,13 @@ export class AppComponent implements OnInit {
 
   constructor(
     private el: ElementRef,
-    private renderer: Renderer2,
-    private settingsService: SettingsService
+    private renderer: Renderer2
   ) {
     //
   }
 
   public ngOnInit(): void {
-    this.settingsService.settings$.subscribe((settings: Setting[]): void => {
-      const theme = settings.find((setting: Setting): boolean => setting.name === 'theme-admin');
-
-      this.setTheme(theme.value);
-    });
+    //
   }
 
   public setTheme(className: string): void {

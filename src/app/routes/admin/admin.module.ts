@@ -15,7 +15,7 @@ import {
 import { AdminComponent } from './admin.component';
 import { AdminRoutingModule } from './admin.routing';
 import { HeaderModule } from '../../components/header/header.module';
-import { FooterModule } from '../../components/footer/footer.module';
+import { AdminNavListModule } from '../../components/admin-nav-list/admin-nav-list.module';
 
 @NgModule({
   imports: [
@@ -31,7 +31,7 @@ import { FooterModule } from '../../components/footer/footer.module';
     MatDividerModule,
     MatMenuModule,
     HeaderModule,
-    FooterModule
+    AdminNavListModule
   ],
   declarations: [AdminComponent]
 })
